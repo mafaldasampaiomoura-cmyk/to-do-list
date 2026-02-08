@@ -4,6 +4,12 @@ const listaCompleta = document.querySelector('.list-tasks');
 let minhaListaDeItens = []; 
 
 function adicionarTarefa(){
+    if (input.value.trim() === '') {
+        alert("Por favor, preencha algo");
+        input.focus();
+        return;
+    }
+    
     minhaListaDeItens.push({
         tarefa: input.value, 
         concluida: false
